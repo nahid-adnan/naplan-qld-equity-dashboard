@@ -68,6 +68,9 @@ so every insight has to be legible at a glance and defensible when quoted in a b
   <img src="images/02-school-explorer.png" width="900" alt="School Explorer page: sector drill-down column chart, gap-to-state-average bars, governing-body bars and the school detail table">
 </p>
 
+<img width="1400" height="862" alt="01-overview" src="https://github.com/user-attachments/assets/2baa16ee-e731-432c-b798-d72f63aea736" />
+
+
 ### 3️⃣ Trends & Analytics — where are the equity gaps?
 
 <p align="center">
