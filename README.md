@@ -139,15 +139,12 @@ Yi et al. (2007) · Tufte (2001) · Few (2013) · Knaflic (2015)
 📦 naplan-qld-equity-dashboard
 ├── 📄 README.md
 ├── 🚫 .gitignore
-├── 📊 report/
-│   └── Hasan_Adnan_BMNahid_MA5830_A4.pbix        ← open in Power BI Desktop
-├── 📁 data/
-│   ├── school_stats_naplan_2014_Queensland.xlsx
-│   ├── school_profile_2014_Queensland.xlsx
-│   └── school_locations_2014_Queensland.xlsx
-└── 📚 docs/
-    ├── Adnan_BMNahidHasan_MA5830_A4.pdf          ← dashboard visualisation plan
-    └── Assessment_4_NAPLAN_File_Descriptions.pdf ← source file descriptions
+├── 📊 Hasan_Adnan_BMNahid_MA5830_A4.pbix           ← the dashboard — open in Power BI Desktop
+├── 📈 school_stats_naplan_2014_Queensland.xlsx     ← NAPLAN results
+├── 🏫 school_profile_2014_Queensland.xlsx          ← ICSEA, governing body
+├── 📍 school_locations_2014_Queensland.xlsx        ← geography, remoteness
+├── 📚 Adnan_BMNahidHasan_MA5830_A4.pdf             ← dashboard visualisation plan
+└── 📋 Assessemtn_4_NAPLAN_File_Descriptions.pdf    ← source file descriptions
 ```
 
 ---
@@ -158,11 +155,11 @@ Yi et al. (2007) · Tufte (2001) · Few (2013) · Knaflic (2015)
 |:----:|--------|
 | 1️⃣ | Install [**Power BI Desktop**](https://powerbi.microsoft.com/desktop/) (Windows) |
 | 2️⃣ | Clone or download this repository |
-| 3️⃣ | Open `report/Hasan_Adnan_BMNahid_MA5830_A4.pbix` |
-| 4️⃣ | If prompted to refresh, point the data sources at the files in `data/` |
+| 3️⃣ | Open `Hasan_Adnan_BMNahid_MA5830_A4.pbix` |
+| 4️⃣ | If prompted to refresh, point the data sources at the three `.xlsx` files in the repo root |
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/naplan-qld-equity-dashboard.git
+git clone https://github.com/nahid-adnan/naplan-qld-equity-dashboard.git
 ```
 
 ---
