@@ -1,0 +1,20 @@
+# Power BI temp / cache / recovery files
+*.tmp
+~$*
+*.pbix.lock
+
+# Power BI Project (.pbip) local caches — keep if you version the .pbip folders,
+# otherwise these are safe to ignore
+.pbi/
+*.Report/.pbi/
+*.SemanticModel/.pbi/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office lock files
+~$*.xlsx
+~$*.docx
+~$*.pptx
