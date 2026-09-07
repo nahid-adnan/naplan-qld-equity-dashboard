@@ -59,8 +59,8 @@ so every insight has to be legible at a glance and defensible when quoted in a b
 ### 1️⃣ Overview — the state-wide position
 
 <p align="center">
-  <img src="images/01-overview.png" width="900" alt="Overview page: KPI cards, ICSEA-versus-score scatter, school location map, domain bars and remoteness combo chart">
-</p>
+ <img width="1400" height="862" alt="01-overview" src="https://github.com/user-attachments/assets/fd5eed06-d7fb-4bd5-bc41-7664bf90f507" />
+
 
 ### 2️⃣ School Explorer — drill into individual schools
 
