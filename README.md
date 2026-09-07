@@ -72,14 +72,14 @@ so every insight has to be legible at a glance and defensible when quoted in a b
 ### 3️⃣ Trends & Analytics — where are the equity gaps?
 
 <p align="center">
-  <img src="images/03-trends-analytics.png" width="900" alt="Trends and Analytics page: year-level by domain matrix, domain bars, minimum-standard columns, sector ribbon chart and decomposition tree">
-</p>
+<img width="1739" height="862" alt="03-trends-analytics" src="https://github.com/user-attachments/assets/d7a9bec9-20df-457f-832b-0cac71a623e9" />
+
 
 ### 🔍 School Snapshot — the report-page tooltip
 
 <p align="center">
-  <img src="images/04-school-snapshot-tooltip.png" width="420" alt="School Snapshot tooltip: average score, percentage meeting standard, students tested and a per-domain mini-bar">
-</p>
+<img width="531" height="428" alt="04-school-snapshot-tooltip" src="https://github.com/user-attachments/assets/2b166e74-e133-48e0-a47f-00247388560d" />
+
 
 ---
 
