@@ -56,6 +56,30 @@ so every insight has to be legible at a glance and defensible when quoted in a b
 | 3️⃣ | **Trends & Analytics** | Analytical / AI-driven investigation | Year-level × domain matrix · domain & minimum-standard columns · sector ribbon · decomposition tree |
 | 🔍 | *School Snapshot* <sub>(hidden tooltip)</sub> | Details on demand | Per-school score · % meeting standard · students tested · domain mini-bar |
 
+### 1️⃣ Overview — the state-wide position
+
+<p align="center">
+  <img src="images/01-overview.png" width="900" alt="Overview page: KPI cards, ICSEA-versus-score scatter, school location map, domain bars and remoteness combo chart">
+</p>
+
+### 2️⃣ School Explorer — drill into individual schools
+
+<p align="center">
+  <img src="images/02-school-explorer.png" width="900" alt="School Explorer page: sector drill-down column chart, gap-to-state-average bars, governing-body bars and the school detail table">
+</p>
+
+### 3️⃣ Trends & Analytics — where are the equity gaps?
+
+<p align="center">
+  <img src="images/03-trends-analytics.png" width="900" alt="Trends and Analytics page: year-level by domain matrix, domain bars, minimum-standard columns, sector ribbon chart and decomposition tree">
+</p>
+
+### 🔍 School Snapshot — the report-page tooltip
+
+<p align="center">
+  <img src="images/04-school-snapshot-tooltip.png" width="420" alt="School Snapshot tooltip: average score, percentage meeting standard, students tested and a per-domain mini-bar">
+</p>
+
 ---
 
 ## 📁 Data sources
@@ -144,7 +168,8 @@ Yi et al. (2007) · Tufte (2001) · Few (2013) · Knaflic (2015)
 ├── 🏫 school_profile_2014_Queensland.xlsx          ← ICSEA, governing body
 ├── 📍 school_locations_2014_Queensland.xlsx        ← geography, remoteness
 ├── 📚 Adnan_BMNahidHasan_MA5830_A4.pdf             ← dashboard visualisation plan
-└── 📋 Assessemtn_4_NAPLAN_File_Descriptions.pdf    ← source file descriptions
+├── 📋 Assessemtn_4_NAPLAN_File_Descriptions.pdf    ← source file descriptions
+└── 🖼️ images/                                      ← dashboard screenshots used above
 ```
 
 ---
