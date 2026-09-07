@@ -59,27 +59,26 @@ so every insight has to be legible at a glance and defensible when quoted in a b
 ### 1️⃣ Overview — the state-wide position
 
 <p align="center">
- <img width="1400" height="862" alt="01-overview" src="https://github.com/user-attachments/assets/fd5eed06-d7fb-4bd5-bc41-7664bf90f507" />
-
+  <img src="images/01-overview.png" width="900" alt="Overview page: KPI cards, ICSEA-versus-score scatter, school location map, domain bars and remoteness combo chart">
+</p>
 
 ### 2️⃣ School Explorer — drill into individual schools
 
 <p align="center">
-<img width="1739" height="862" alt="02-school-explorer" src="https://github.com/user-attachments/assets/76cc5f62-6dd3-40ac-b2a3-e2d06ccd5c18" />
-
-
+  <img src="images/02-school-explorer.png" width="900" alt="School Explorer page: sector drill-down column chart, gap-to-state-average bars, governing-body bars and the school detail table">
+</p>
 
 ### 3️⃣ Trends & Analytics — where are the equity gaps?
 
 <p align="center">
-<img width="1739" height="862" alt="03-trends-analytics" src="https://github.com/user-attachments/assets/d7a9bec9-20df-457f-832b-0cac71a623e9" />
-
+  <img src="images/03-trends-analytics.png" width="900" alt="Trends and Analytics page: year-level by domain matrix, domain bars, minimum-standard columns, sector ribbon chart and decomposition tree">
+</p>
 
 ### 🔍 School Snapshot — the report-page tooltip
 
 <p align="center">
-<img width="531" height="428" alt="04-school-snapshot-tooltip" src="https://github.com/user-attachments/assets/2b166e74-e133-48e0-a47f-00247388560d" />
-
+  <img src="images/04-school-snapshot-tooltip.png" width="420" alt="School Snapshot tooltip: average score, percentage meeting standard, students tested and a per-domain mini-bar">
+</p>
 
 ---
 
