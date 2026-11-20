@@ -163,7 +163,6 @@ Yi et al. (2007) · Tufte (2001) · Few (2013) · Knaflic (2015)
 ├── 🏫 school_profile_2014_Queensland.xlsx          ← ICSEA, governing body
 ├── 📍 school_locations_2014_Queensland.xlsx        ← geography, remoteness
 ├── 📚 Adnan_BMNahidHasan_MA5830_A4.pdf             ← dashboard visualisation plan
-├── 📋 Assessemtn_4_NAPLAN_File_Descriptions.pdf    ← source file descriptions
 └── 🖼️ images/                                      ← dashboard screenshots used above
 ```
 
