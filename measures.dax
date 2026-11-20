@@ -1,0 +1,25 @@
+// Measures from the published Power BI model. Run this query in DAX Query View.
+DEFINE
+    MEASURE 'NAPLAN_Scores'[Avg Mean Score] = CALCULATE(AVERAGE(NAPLAN_Scores[Value]), NAPLAN_Scores[Measure Type] = "Mean Score")
+
+    MEASURE 'NAPLAN_Scores'[Avg % at or above NMS] = CALCULATE(AVERAGE(NAPLAN_Scores[Value]), NAPLAN_Scores[Measure Type] = "Percent NMS")
+
+    MEASURE 'NAPLAN_Scores'[Students Tested] = CALCULATE(SUM(NAPLAN_Scores[Value]), NAPLAN_Scores[Measure Type]="Enrolment", REMOVEFILTERS(NAPLAN_Scores[Domain Label]))
+
+    MEASURE 'NAPLAN_Scores'[School Count] = DISTINCTCOUNT(NAPLAN_Scores[ACARA SML ID])
+
+    MEASURE 'NAPLAN_Scores'[Avg ICSEA] = AVERAGE(School_Locations[ICSEA])
+
+    MEASURE 'NAPLAN_Scores'[Mean Score vs QLD Avg] = [Avg Mean Score] - CALCULATE([Avg Mean Score], ALL(School_Locations))
+
+    MEASURE 'NAPLAN_Scores'[School Rank by Mean Score] = IF(NOT ISBLANK([Avg Mean Score]), RANKX(ALLSELECTED(School_Locations[School Name]), CALCULATE([Avg Mean Score]), , DESC, DENSE))
+
+    MEASURE 'NAPLAN_Scores'[Lowest Scoring Domain] = VAR T = ADDCOLUMNS(VALUES(NAPLAN_Scores[Domain Label]), "@S", CALCULATE([Avg Mean Score])) VAR V = FILTER(T, NOT ISBLANK([@S])) VAR M = MINX(V, [@S]) RETURN CONCATENATEX(FILTER(V, [@S] = M), NAPLAN_Scores[Domain Label], ", ")
+
+    MEASURE 'NAPLAN_Scores'[Furthest Below State Average] = VAR T = ADDCOLUMNS(VALUES(School_Locations[ABS Remoteness Area]), "@G", CALCULATE([Mean Score vs QLD Avg])) VAR V = FILTER(T, NOT ISBLANK([@G])) VAR M = MINX(V, [@G]) RETURN CONCATENATEX(FILTER(V, [@G] = M), School_Locations[ABS Remoteness Area], ", ")
+
+    MEASURE 'NAPLAN_Scores'[Sector Score Gap] = VAR T = ADDCOLUMNS(VALUES(School_Locations[School Sector]), "@S", CALCULATE([Avg Mean Score])) VAR V = FILTER(T, NOT ISBLANK([@S])) RETURN MAXX(V, [@S]) - MINX(V, [@S])
+
+    MEASURE 'NAPLAN_Scores'[Schools Below State Average] = VAR StateAvg = CALCULATE([Avg Mean Score], ALL(School_Locations)) RETURN COUNTROWS(FILTER(VALUES(School_Locations[ACARA SML ID]), NOT ISBLANK([Avg Mean Score]) && [Avg Mean Score] < StateAvg))
+
+EVALUATE ROW("Avg Mean Score", [Avg Mean Score])

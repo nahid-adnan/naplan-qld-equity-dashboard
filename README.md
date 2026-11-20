@@ -20,6 +20,8 @@
 
 ---
 
+[Model diagram and relationships](model.md) · [11 DAX measures](measures.dax) · [Power Query transformations](power-query.pq) · [Calculated columns and tables](calculated-fields.md)
+
 ## 👤 About
 
 | | |
@@ -52,7 +54,7 @@ so every insight has to be legible at a glance and defensible when quoted in a b
 |:--:|------|---------|----------------|
 | 1️⃣ | **Overview** | State-wide position | 6 KPI cards · ICSEA-vs-score scatter · school location map |
 | 2️⃣ | **School Explorer** | Filter and drill to individual schools | Sector → school drill-down · gap-to-average bar · governing-body bar · sector donut |
-| 3️⃣ | **Trends & Analytics** | Analytical / AI-driven investigation | Year-level × domain matrix · domain & minimum-standard columns · sector ribbon · decomposition tree |
+| 3️⃣ | **Year-Level & Domain Comparisons** | Cross-sectional comparison of 2014 cohorts | Year-level × domain matrix · domain & minimum-standard columns · sector ribbon · decomposition tree |
 | 🔍 | *School Snapshot* <sub>(hidden tooltip)</sub> | Details on demand | Per-school score · % meeting standard · students tested · domain mini-bar |
 
 ### 1️⃣ Overview — the state-wide position
@@ -67,11 +69,13 @@ so every insight has to be legible at a glance and defensible when quoted in a b
   <img src="images/02-school-explorer.png" width="900" alt="School Explorer page: sector drill-down column chart, gap-to-state-average bars, governing-body bars and the school detail table">
 </p>
 
-### 3️⃣ Trends & Analytics — where are the equity gaps?
+### 3️⃣ Year-Level & Domain Comparisons — where are the equity gaps?
 
 <p align="center">
-  <img src="images/03-trends-analytics.png" width="900" alt="Trends and Analytics page: year-level by domain matrix, domain bars, minimum-standard columns, sector ribbon chart and decomposition tree">
+  <img src="images/03-trends-analytics.png" width="900" alt="Year-level and domain comparison page, original capture: year-level by domain matrix, domain bars, minimum-standard columns, sector ribbon chart and decomposition tree">
 </p>
+
+The archived screenshot uses the original page title. Every year level shown was assessed in 2014.
 
 ### 🔍 School Snapshot — the report-page tooltip
 
@@ -93,19 +97,7 @@ Three supplied ACARA files for Queensland schools (2014):
 
 ### 🔗 Data model
 
-A **star schema** built in Power Query:
-
-```
-┌──────────────────────────────┐         ┌─────────────────────────────┐
-│   📊 FACT — NAPLAN results   │  ──▶    │  🏫 DIM — School dimension  │
-│   60,236 rows (unpivoted)    │  many   │  1,865 rows                 │
-│   Attribute → Value          │  to one │  Sector · Remoteness ·      │
-│   Year Level · Domain ·      │         │  Lat/Long · ICSEA ·         │
-│   Measure Type               │         │  Governing Body             │
-└──────────────────────────────┘         └─────────────────────────────┘
-              └────────── ACARA SML ID ──────────┘
-                  single-direction cross-filter
-```
+![Power BI model showing the school dimension filtering the NAPLAN results](model.png)
 
 <details>
 <summary>🧮 <strong>Key DAX measures</strong> (click to expand)</summary>
@@ -123,6 +115,10 @@ A **star schema** built in Power Query:
 | `School Rank by Mean Score` | `RANKX` over `ALLSELECTED` names, `ISBLANK`-guarded |
 
 </details>
+
+### How the averages work
+
+Each reported school × year level × domain result contributes one value to its measure. The model takes the arithmetic mean of those values in the current filters. A school with more reported combinations can contribute more rows. A pupil-weighted Queensland score would require appropriate student counts for each result. The same distinction applies to the percentage meeting the national minimum standard (NMS).
 
 ### ⚠️ Data limitations
 
@@ -180,7 +176,7 @@ Yi et al. (2007) · Tufte (2001) · Few (2013) · Knaflic (2015)
 | 1️⃣ | Install [**Power BI Desktop**](https://powerbi.microsoft.com/desktop/) (Windows) |
 | 2️⃣ | Clone or download this repository |
 | 3️⃣ | Open `Hasan_Adnan_BMNahid_MA5830_A4.pbix` |
-| 4️⃣ | If prompted to refresh, point the data sources at the three `.xlsx` files in the repo root |
+| 4️⃣ | In **Home → Transform data → Edit parameters**, set `DataFolderPath` to the local folder holding the three `.xlsx` files listed above. Apply and select **Refresh** |
 
 ```bash
 git clone https://github.com/nahid-adnan/naplan-qld-equity-dashboard.git
