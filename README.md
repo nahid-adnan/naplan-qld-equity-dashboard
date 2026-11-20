@@ -75,7 +75,7 @@ so every insight has to be legible at a glance and defensible when quoted in a b
   <img src="images/03-trends-analytics.png" width="900" alt="Year-level and domain comparison page, original capture: year-level by domain matrix, domain bars, minimum-standard columns, sector ribbon chart and decomposition tree">
 </p>
 
-The archived screenshot uses the original page title. Every year level shown was assessed in 2014.
+In the downloadable coursework report and original screenshot, this page is labelled **Trends & Analytics**. It compares year levels and domains observed in 2014. Use the published school counts to check whether groups have comparable coverage.
 
 ### 🔍 School Snapshot — the report-page tooltip
 
